@@ -13,7 +13,7 @@ public class Turma {
     }
 
     public void exibirDados() {
-        System.out.println(">>>>Dados das Turma<<<<");
+        System.out.println(">>>>Dados da Turma<<<<");
         System.out.println("Codigo: " +this.codigo);
         System.out.println("Turma: " +this.nome);
         System.out.println("");

@@ -8,7 +8,9 @@ public class Main {
 
         Aluno aluno01 = new Aluno();
         Turma turma01 = new Turma();
-        Curso curso01 = new Curso();
+        //Curso curso01 = new Curso();
+        Presencial curso01 = new Presencial();
+        //Ead curso01 = new Ead();
 
         aluno01.setTurma(turma01);
         turma01.setCurso(curso01);
