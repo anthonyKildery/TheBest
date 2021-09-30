@@ -1,6 +1,6 @@
 package dsoo;
 
-public class Curso {
+public abstract class Curso {
     private int codigo;
     private String nome;
     private double valor;

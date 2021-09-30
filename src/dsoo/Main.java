@@ -8,20 +8,39 @@ public class Main {
 
         Aluno aluno01 = new Aluno();
         Turma turma01 = new Turma();
-        //Curso curso01 = new Curso();
-        Presencial curso01 = new Presencial();
-        //Ead curso01 = new Ead();
 
+        Presencial[] curso01 = new Presencial[3];
+        curso01[0] = new Presencial();
+        curso01[1] = new Presencial();
+        curso01[2] = new Presencial();
+
+        /*Ead[] curso01 = new Ead[3];
+        curso01[0] = new Ead();
+        curso01[1] = new Ead();
+        curso01[2] = new Ead();*/
+
+        //ASSOCIANDO OBJETOS
         aluno01.setTurma(turma01);
-        turma01.setCurso(curso01);
+        turma01.setCurso(curso01[0]);
+        turma01.setCurso(curso01[1]);
+        turma01.setCurso(curso01[2]);
 
         //ATRIBUIÇÕES
         aluno01.setNome("Anthony");
         turma01.setNome("3 - ano");
-        curso01.setNome("Iformática");
-        curso01.setValor(250.00);
+        curso01[0].setNome("Iformática");
+        curso01[1].setNome("Inglês");
+        curso01[2].setNome("Meio Ambiente");
 
-        int opcao01;
+        curso01[0].setValor(0);
+        curso01[1].setValor(0);
+        curso01[2].setValor(0);
+
+        curso01[0].setCodigo(1);
+        curso01[1].setCodigo(2);
+        curso01[2].setCodigo(3);
+
+        int opcao01, codigo;
         double valor;
         String nome;
 
@@ -142,12 +161,16 @@ public class Main {
                             turma01.exibirDados();
                             break;
                         case 3: //CURSO
-                            curso01.exibirDados();
+                            System.out.println("Digite o código: ");
+                            codigo = ler.nextInt();
+                            curso01[codigo].exibirDados();
                             break;
                         case 4: //GERAL
+                            System.out.println("Digite o código: ");
+                            codigo = ler.nextInt();
                             aluno01.exibirDados();
                             turma01.exibirDados();
-                            curso01.exibirDados();
+                            curso01[codigo].exibirDados();
                             break;
                     }
                     break;
